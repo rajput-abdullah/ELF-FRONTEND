@@ -65,7 +65,7 @@ export default function MapView({ plan }: { plan: Plan | null }) {
           }
         }
       }
-
+// If no route geometry from backend or Mapbox, create a simple straight line
       if (!routeGeo) {
         routeGeo = { type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'LineString', coordinates: [start, end] }, properties: {} }] }
       }
