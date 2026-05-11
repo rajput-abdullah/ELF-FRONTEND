@@ -96,7 +96,7 @@ export default function TripPlanner({ onPlan, onShowPdf }: Props) {
       }
 
       // Use relative API path so Vite dev proxy can forward to backend and avoid CORS issues.
-      const apiUrl = '/api/plan-trip/'
+      const apiUrl = 'https://spotter-backend-j02m.onrender.com/api/plan-trip/'
       const resp = await axios.post(apiUrl, body)
       onPlan(resp.data)
     } catch (err) {

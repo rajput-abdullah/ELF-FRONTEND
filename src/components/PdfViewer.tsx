@@ -8,7 +8,7 @@ export default function PdfViewer({ uuid }: { uuid: string }) {
     let canceled = false
     async function load() {
       try {
-        const url = `/api/plan-trip/${uuid}/logs.pdf`
+        const url = `https://spotter-backend-j02m.onrender.com/api/plan-trip/${uuid}/logs.pdf`
         const resp = await axios.get(url, { responseType: 'blob' })
         if (canceled) return
         const bUrl = URL.createObjectURL(resp.data)
