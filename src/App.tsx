@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import TripPlanner from './components/TripPlanner'
 import MapView from './components/MapView'
 import SummaryView from './components/SummaryView'
@@ -15,6 +16,7 @@ export default function App() {
 
   return (
     <ErrorBoundary>
+      <Analytics />
       <div className="app">
         <ErrorLogger />
   {/* debug banner removed */}
